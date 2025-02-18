@@ -1,0 +1,47 @@
+<html>
+<head>
+<title>Fibonacci Series</title>
+</head>
+<body>
+    <script type="text/javascript">
+    // Function to run test cases
+    function runTestCase(testInput) {
+        var fib1 = 0, fib2 = 1, fib = 0;
+        var num = testInput;
+        if (num != null && num > 0) {
+            document.write("<h1>Test case input: " + num + "</h1>");
+            document.write("<h1>The first " + num + " numbers in the Fibonacci series</h1>");
+            if (num == 1)
+                document.write("<h2>" + fib1 + "</h2>");
+            else {
+                document.write("<h2>" + fib1 + "</h2>");
+                document.write("<h2>" + fib2 + "</h2>");
+            }
+            for (var i = 3; i <= num; i++) {
+                fib = fib1 + fib2;
+                document.write("<h2>" + fib + "</h2>");
+                fib1 = fib2;
+                fib2 = fib;
+            }
+        } else {
+            document.write("<h2>Invalid Input</h2>");
+        }
+    }
+
+    
+    runTestCase(5); // Test case 1: Valid input, 5
+    document.write("<hr>");
+    runTestCase(10); // Test case 2: Valid input, 10
+    document.write("<hr>");
+    runTestCase(1);  // Test case 3: Edge case, 1
+    document.write("<hr>");
+    runTestCase(2);  // Test case 4: Edge case, 2
+    document.write("<hr>");
+    runTestCase(-5); // Test case 5: Invalid input, negative number
+    document.write("<hr>");
+    runTestCase(0);  // Test case 6: Invalid input, 0
+    document.write("<hr>");
+    runTestCase("abc"); // Test case 7: Invalid input, non-numeric string
+    </script>
+</body>
+</html>
