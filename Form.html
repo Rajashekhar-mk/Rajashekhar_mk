@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Form</title>
+</head>
+<body>
+<form align="center">
+   <label for:"name"> Name:</lable>
+   <input type="text",id="name",name="name",required><br><br>
+   <label for:"date">DOB:</lable>
+   <input type="date",id="dob",name="dob"><br><br>
+   <lable for:"age">Age:</lable>
+   <input type="Range",id="age",name="age",min="0",max="100",value="18",onchange="updateAgeDisplay()"><br><br>
+   <label for:"email>Email:</lable>
+   <input type="email",id="email",name="email"><br><br>
+   <label for="website">Website:</label>
+   <input type="url" id="website" name="website"><br><br>
+  
+   <div id="ageAlert" class="alert-message">You must be above 18 years to enter your website.</div>
+
+   <input type="submit" value="Submit">
+</form>
+</body>
+</html>
